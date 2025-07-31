@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//upload routes
 Route::prefix('uploads')->group(function () {
     Route::post('/', [UploadController::class, 'upload'])->name('uploads.store');
     Route::get('/', [UploadController::class, 'index'])->name('uploads.index');

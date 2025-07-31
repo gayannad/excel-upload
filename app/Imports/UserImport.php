@@ -11,10 +11,7 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 class UserImport implements ShouldQueue, ToModel, WithChunkReading, WithHeadingRow
 {
-    /**
-     * @param  Collection  $collection
-     */
-    public function model(array $row)
+    public function model(array $row): UserUpload
     {
         return new UserUpload([
             'name' => $row['name'],

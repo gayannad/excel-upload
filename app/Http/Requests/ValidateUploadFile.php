@@ -21,7 +21,7 @@ class ValidateUploadFile extends FormRequest
      */
     public function rules(): array
     {
-//        dd(request()->all());
+        //        dd(request()->all());
         return [
             'file' => ['required', 'file', 'max:102400'],
         ];

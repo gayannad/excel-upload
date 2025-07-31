@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ValidateUploadFile;
 use App\Repositories\Interfaces\UserUploadRepositoryInterface;
 use App\Services\UploadService;
-use Illuminate\Http\Request;
 
 class UploadController extends Controller
 {
@@ -26,7 +25,7 @@ class UploadController extends Controller
     {
         $this->uploadService->uploadData();
 
-//        return redirect()->route('uploads.index');
+        return redirect()->route('uploads.index');
     }
 
     /**
