@@ -12,18 +12,36 @@
 - Composer
 - Mysql or Sqlite
 
-## Project Setup
 
-```bash
-# 1. Clone the repo
-    git clone https://github.com/gayannad/excel-upload
-    cd excel-upload
+## Installation & configurations
 
-# 2. Install Dependenices
-    composer install
-    npm install
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/gayannad/excel-upload.git
+   cd excel-upload
 
-# 3. Install Dependenices
-    composer install
-    npm install
 
+2. **Install dependencies**
+   ```bash
+   composer install
+
+
+3. **Configure environment**
+   ```bash
+    cp .env.example .env
+    php artisan key:generate
+
+4. **Run migrations and seeders**
+   ```bash
+    php artisan migrate
+
+5. **Serve the app**
+   ```bash
+    php artisan serve
+
+6. **Run queue worker**
+   ```bash
+    php artisan queue:work
+
+
+   
